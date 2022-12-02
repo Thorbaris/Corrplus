@@ -52,12 +52,12 @@
       <form class="d-flex" role="search">
         
         <div v-if="($store.state.logeado === true)">
-          <router-link to="/adminpanel"><button class="btn btn-outline-success" type="submit">Panel</button></router-link>
+          <router-link to="/adminpanel"><button class="btn btn-success" type="submit">Panel</button></router-link>
           <router-link to="/login"><button class="btn btn-outline-secondary" type="submit">Login</button></router-link>
         </div>
         <div v-else>
           <router-link to="/adminpanel"><button class="btn btn-outline-secondary" type="submit">Panel</button></router-link>
-          <router-link to="/login"><button class="btn btn-outline-success" type="submit">Login</button></router-link>
+          <router-link to="/login"><button class="btn btn-success" type="submit">Login</button></router-link>
           
         </div>
       </form>

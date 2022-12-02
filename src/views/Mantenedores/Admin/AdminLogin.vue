@@ -1,11 +1,6 @@
 <template>
   <div class="container">
-    <p
-      class="lead border-bottom"
-      style="text-align: left; font-size: 30px; font-weight: 600"
-    >
-      Login
-    </p>
+    <p class="lead border-bottom tituloseccion">Login</p>
 
     <div class="mx-auto w-50">
       <div class="card">
@@ -41,16 +36,19 @@
               <div class="mb-3 form-check">
                 Conexion / Desconexion Rapida
                 <label class="switch">
-                  <input v-if="$store.state.logeado" type="checkbox" @click="logearDeslogear()" checked/>
-                  <input v-else type="checkbox" @click="logearDeslogear()"/>
+                  <input
+                    v-if="$store.state.logeado"
+                    type="checkbox"
+                    @click="logearDeslogear()"
+                    checked
+                  />
+                  <input v-else type="checkbox" @click="logearDeslogear()" />
                   <span class="slider round"></span>
                 </label>
               </div>
             </form>
 
-            <button type="submit" class="btn btn-primary">
-              Ingresar
-            </button>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
           </form>
         </div>
       </div>
@@ -59,13 +57,12 @@
 </template>
 
 <script>
-
 export default {
-  methods:{
-    logearDeslogear(){
-      this.$store.commit('loginLogout')
-    }
-  }
+  methods: {
+    logearDeslogear() {
+      this.$store.commit("loginLogout");
+    },
+  },
 };
 </script>
 

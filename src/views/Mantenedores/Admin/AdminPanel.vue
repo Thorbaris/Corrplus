@@ -1,11 +1,6 @@
 <template>
   <div class="container">
-    <p
-      class="lead border-bottom"
-      style="text-align: left; font-size: 30px; font-weight: 600"
-    >
-      Panel de administrador
-    </p>
+    <p class="lead border-bottom tituloseccion">Panel de Administrador</p>
 
     <div class="mx-auto w-50">
       <div class="card">

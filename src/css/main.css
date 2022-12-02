@@ -5,4 +5,16 @@
     line-height: 0px;
     padding-top: 0px;
 
-  }
+}
+.tituloseccion{
+    text-align: left; font-size: 30px;
+    font-weight: 600;
+}
+.tarjeta{
+    width: 18rem;
+    margin: 10px 10px 10px 10px;
+}
+.divIconos{
+    margin: 5px;
+    padding: 3px;
+}

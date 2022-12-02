@@ -1,11 +1,6 @@
 <template>
   <div class="container">
-    <p
-      class="lead border-bottom"
-      style="text-align: left; font-size: 30px; font-weight: 600"
-    >
-      Contacto
-    </p>
+    <p class="lead border-bottom tituloseccion">Contacto</p>
     <div class="mx-auto w-75">
       <div class="card">
         <div class="card-body">

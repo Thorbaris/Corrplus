@@ -1,11 +1,6 @@
 <template>
   <div class="container">
-    <p
-      class="lead border-bottom"
-      style="text-align: left; font-size: 30px; font-weight: 600"
-    >
-      Quienes Somos
-    </p>
+    <p class="lead border-bottom tituloseccion">Quienes Somos</p>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id

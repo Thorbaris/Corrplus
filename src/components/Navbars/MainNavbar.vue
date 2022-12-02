@@ -50,8 +50,16 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        
+        <div v-if="($store.state.logeado === true)">
+          <router-link to="/adminpanel"><button class="btn btn-outline-success" type="submit">Panel</button></router-link>
+          <router-link to="/login"><button class="btn btn-outline-secondary" type="submit">Login</button></router-link>
+        </div>
+        <div v-else>
+          <router-link to="/adminpanel"><button class="btn btn-outline-secondary" type="submit">Panel</button></router-link>
+          <router-link to="/login"><button class="btn btn-outline-success" type="submit">Login</button></router-link>
+          
+        </div>
       </form>
     </div>
   </div>

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
+    <p
+      class="lead border-bottom"
+      style="text-align: left; font-size: 30px; font-weight: 600"
+    >
+      Contacto
+    </p>
     <div class="mx-auto w-75">
-      <p
-        class="lead border-bottom"
-        style="text-align: left; font-size: 30px; font-weight: 600"
-      >
-        Contacto
-      </p>
       <div class="card">
         <div class="card-body">
           <form>

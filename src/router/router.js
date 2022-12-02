@@ -1,9 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+
 // Enlaces principales
 import Home from "../views/Mantenedores/Home.vue";
 import QuienesSomos from "../views/Mantenedores/QuienesSomos.vue";
 import Contacto from "../views/Mantenedores/Contacto.vue";
+
+//Enlaces de Administrador
+import LogIn from "../views/Mantenedores/Admin/AdminLogin.vue";
+import AdminPanel from "../views/Mantenedores/Admin/AdminPanel.vue";
 
 //Enlaces Venta
 import VentaBodegas from "../views/Mantenedores/Venta/Bodegas.vue";
@@ -41,6 +46,19 @@ const routes = [
     path: "/Contacto",
     name: "Contacto",
     component: Contacto,
+  },
+
+  //Enlaces de Administador
+
+  {
+    path: "/Login",
+    name: "Login",
+    component: LogIn,
+  },
+  {
+    path: "/AdminPanel",
+    name: "AdminPanel",
+    component: AdminPanel,
   },
 
 //Enlaces Venta

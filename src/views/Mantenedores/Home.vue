@@ -1,31 +1,66 @@
 <template>
   <div class="container">
-  <div style="margin:20px 0 50px 0">
-    Venta de propiedades en la Araucanía
-  </div>
-    <div class="card" style="width: 18rem;">
-  <img src='@/img/logo.png' class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-
-</div>
+    <p
+        class="lead border-bottom"
+        style="text-align: left; font-size: 30px; font-weight: 600"
+      >
+        Propiedades en la Araucanía 
+      </p>
+    <div class="d-flex">
+      <div
+        v-for="(propiedad, index) in propiedades"
+        :key="index"
+        class="card"
+        style="width: 18rem;margin:10px 10px 10px 10px;"
+      >
+        <img :src="propiedad.foto" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ propiedad.titulo}}</h5>
+          <p class="card-text">
+            {{ propiedad.descripcion }}
+          </p>
+          <div class="card-body d-flex" style="margin: 0px;padding: 0px;">
+            <div style="margin: 5px;padding: 3px;" title="Dormitorios">
+              {{ propiedad.dormitorios }}
+              <font-awesome-icon icon="fa-solid fa-person-shelter" />
+            </div>
+            <div style="margin: 5px;padding: 3px;" title="Baños">
+              {{ propiedad.baños }}
+              <font-awesome-icon icon="fa-solid fa-bath" />
+            </div>
+            <div v-if="propiedad.estacionamiento" style="margin: 5px;padding: 3px;" title="Estacionamientos">
+              {{ propiedad.estacionamiento }}
+              <font-awesome-icon title="Estacionamientos" icon="fa-solid fa-car" />
+            </div>
+            <div v-else style="margin: 5px;padding: 3px;">
+              ?
+              <font-awesome-icon icon="fa-solid fa-car" />
+            </div>
+          </div>
+          <a href="#" class="btn btn-success" @click="logs()">Ver más detalles</a>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   components: {},
   data() {
     return {
-
+      propiedades: [
+        { foto: require('@/img/casa1.jpg'), titulo: 'Casa 150m2', descripcion: 'Casa en Barrio Ingles', dormitorios: 4, baños :2, estacionamiento: 2},
+        { foto: require('@/img/depto1.jpg'), titulo: 'Departamento 80m2', descripcion: 'Departamento en el centro de Temuco', dormitorios: 3, baños :1},
+      ],      
     };
   },
   methods: {
-
+    logs() {
+      console.log(this.propiedades);
+    },
   },
 };
 </script>
